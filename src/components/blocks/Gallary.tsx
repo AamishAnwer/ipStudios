@@ -167,7 +167,7 @@ const ImageGallery: React.FC = () => {
               </button>
 
               {/* Thumbnail Strip */}
-              <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
+              <div className="absolute bottom-4 left-0 right-0 justify-center space-x-2 hidden md:flex">
                 {images.map((image, index) => (
                   <Image
                     key={index}
@@ -175,7 +175,7 @@ const ImageGallery: React.FC = () => {
                     onClick={() => selectImage(index)}
                     width={88}
                     height={64}
-                    className={`object-cover rounded-lg cursor-pointer border-4  ${
+                    className={`object-cover rounded-lg cursor-pointer border-4 ${
                       currentIndex === index
                         ? "border-white"
                         : "border-transparent"
